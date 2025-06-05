@@ -678,3 +678,84 @@ input:checked + .slides ~ .navigation label:hover {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Existing styles remain the same until the end */
+
+/* Mobile Menu Styles */
+.menu-toggle {
+  display: none; /* Hide the checkbox */
+}
+
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--dark);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .main-nav {
+    position: relative;
+    padding: 15px 5%;
+  }
+  
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  /* When checkbox is checked, show menu */
+  .menu-toggle:checked ~ .nav-links {
+    right: 0;
+  }
+  
+  /* Animate hamburger to X when checked */
+  .menu-toggle:checked + .hamburger .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-toggle:checked + .hamburger .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle:checked + .hamburger .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .nav-links li {
+    margin: 20px 0;
+  }
+}
