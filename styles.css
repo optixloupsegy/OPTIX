@@ -271,7 +271,7 @@ header {
 /* About Section */
 .about {
     padding: 100px 5%;
-    background-color: var(--light);
+    background-color: white;
 }
 
 .about-container {
