@@ -193,6 +193,7 @@ header {
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 100, 0.1);
 }
 
 .product-card:hover {
@@ -219,8 +220,11 @@ header {
     font-weight: 600;
     color: #333;
     text-align: center;
-    background: #f9f9f9;
+    background: var(--light);;
     margin: 0;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Optional: controls underline thickness */
+    text-underline-offset: 4px; /* Optional: controls distance from text */
 }
 
 /* Product overlay effect */
