@@ -6,14 +6,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="Optix Logo">
+                <span>Optix</span>
+            </div>
+            
+            <!-- Hamburger Menu Checkbox (hidden) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+            
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#products">product</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="product-detail">
+        <section class="product-hero">
             <div class="product-image">
                 <img src="imgs/WhatsApp Image 2025-06-05 at 16.25.30_513eba96.jpg" alt="Optix Dental Loupe">
             </div>
+        </section>
+        
+        <section class="product-detail">
             <div class="product-info">
                 <h1>Optix Dental Loupe</h1>
                 <p class="magnification"><strong>Available Magnification:</strong> 2.5X – 3.5X – 4X – 5X – 6X – 8X</p>
@@ -36,7 +60,7 @@
                     <li><strong>Power Output:</strong> 5W</li>
                 </ul>
 
-                <h2>What’s in the Box</h2>
+                <h2>What's in the Box</h2>
                 <ul class="in-box">
                     <li>Dental Loupe</li>
                     <li>LED Light Source</li>
@@ -46,7 +70,6 @@
                     <li>Cleaning Cloth</li>
                     <li>User Manual</li>
                 </ul>
-                
             </div>
         </section>
     </main>

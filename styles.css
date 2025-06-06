@@ -110,52 +110,7 @@ header {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    padding: 60px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-    gap: 60px;
-}
 
-.hero-content {
-    flex: 1;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-    line-height: 1.2;
-}
-
-.tagline {
-    font-size: 1.5rem;
-    color: var(--secondary);
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
 
 
 /* About Section */
@@ -329,21 +284,15 @@ header {
 
 
 
-/* Product Detail Page Styles */
-/* Product Detail Page Styles */
-.product-detail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+
+/* Product Hero Section */
+.product-hero {
     max-width: 1200px;
-    margin: 4rem auto;
+    margin: 2rem auto 0;
     padding: 0 2rem;
-    align-items: start;
 }
 
 .product-image {
-    position: sticky;
-    top: 2rem;
     background: #f8f9fa;
     border-radius: 12px;
     padding: 2rem;
@@ -351,6 +300,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .product-image img {
@@ -366,10 +316,18 @@ header {
     transform: scale(1.02);
 }
 
+/* Product Detail Section */
+.product-detail {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
 .product-info {
     background: #fff;
     padding: 2rem;
     border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .product-info h1 {
@@ -456,26 +414,22 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .product-hero,
     .product-detail {
-        grid-template-columns: 1fr;
-    }
-    
-    .product-image {
-        position: static;
-        margin-bottom: 2rem;
+        padding: 0 1rem;
     }
     
     .product-info h1 {
         font-size: 2rem;
     }
+    
+    .product-image {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .product-detail {
-        padding: 0 1rem;
-    }
-    
     .product-info h1 {
         font-size: 1.8rem;
     }
@@ -899,3 +853,4 @@ footer {
     margin: 20px 0;
   }
 }
+
