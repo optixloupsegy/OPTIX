@@ -2,7 +2,7 @@ function goToProductPage(url) {
     window.location.href = url;
 }
 let currentSlide = 1;
-const totalSlides = 4;
+const totalSlides = 3;
 const slider = document.getElementById('slider');
 const dots = document.querySelectorAll('.dot');
 
