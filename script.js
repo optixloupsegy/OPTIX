@@ -35,7 +35,7 @@ function changeSlide(direction) {
     // Resume auto-play after 5 seconds
     setTimeout(() => {
         slider.classList.add('auto-play');
-    }, 5000);
+    }, 3000);
 }
 
 function goToSlide(slideNumber) {
@@ -48,7 +48,7 @@ function goToSlide(slideNumber) {
     // Resume auto-play after 5 seconds
     setTimeout(() => {
         slider.classList.add('auto-play');
-    }, 5000);
+    }, 3000);
 }
 
 // Initialize
