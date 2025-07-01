@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optix Dental Loupes - FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Color Variables */
+        :root {
+            --primary: #414042;
+            --secondary: #414042;
+            --accent: #94d2bd;
+            --highlight: #ee9b00;
+            --warning: #bb3e03;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: sans-serif;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h1:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--highlight);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+
+        /* FAQ Items */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question:before {
+            content: "Q";
+            display: inline-block;
+            background: var(--highlight);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .faq-answer {
+            padding-left: 34px;
+            position: relative;
+        }
+
+        .faq-answer:before {
+            content: "A";
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.9rem;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            color: var(--gray);
+        }
+
+        .divider:before, .divider:after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .divider:before {
+            margin-right: 1rem;
+        }
+
+        .divider:after {
+            margin-left: 1rem;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .comment {
+            background: var(--light);
+            padding: 1.2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.2rem;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .comment-author {
+            color: var(--primary);
+        }
+
+        .comment-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .comment-content {
+            font-style: italic;
+            color: var(--dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Optix Dental Loupes - Frequently Asked Questions</h1>
+        </header>
+
+        <section class="section">
+            <div class="faq-item">
+                <div class="faq-question">What makes Optix loupes different from others on the market?</div>
+                <div class="faq-answer">
+                    <p>Optix loupes are engineered for maximum clarity, comfort, and balance. We use advanced optics and premium materials to reduce fatigue and enhance precision — all with a sleek, ergonomic design that fits naturally into your workflow.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are the loupes through-the-lens (TTL) or flip-up?</div>
+                <div class="faq-answer">
+                    <p>Optix offers both TTL and flip-up models. TTL is ideal for maximum clarity and stability, while flip-up models offer flexibility and easy adjustment — depending on your personal preference and workflow.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What magnification levels are available?</div>
+                <div class="faq-answer">
+                    <p>We currently offer magnification levels from 2.5x up to 8x, with 10x coming soon. This wide range allows clinicians to choose the ideal level of detail for different types of procedures.</p>
+                </div>
+            </div>
+
+            <div class="divider">
+                <i class="fas fa-asterisk"></i>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are the loupes custom-fitted?</div>
+                <div class="faq-answer">
+                    <p>Optix loupes are not fully custom-made, but each set is carefully adjusted and calibrated to match your interpupillary distance (IPD), working distance, and posture — ensuring optimal comfort and vision alignment.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What kind of lighting system is included?</div>
+                <div class="faq-answer">
+                    <p>Optix loupes can be paired with a lightweight, high-intensity LED headlight, featuring adjustable brightness, even light distribution, and a compact battery pack — all designed to keep you focused without distractions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much do the loupes weigh?</div>
+                <div class="faq-answer">
+                    <p>Depending on the lens and lighting system, total weight ranges between 400g to 600g. Thanks to perfect weight distribution, most users find them much lighter and more comfortable than expected — even during long procedures.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use Optix loupes with my prescription lenses?</div>
+                <div class="faq-answer">
+                    <p>Yes. We offer prescription integration for TTL models, and can adapt frame configurations to suit your visual requirements without compromising clarity or balance.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are they comfortable to wear with a face shield or mask?</div>
+                <div class="faq-answer">
+                    <p>Absolutely. Optix loupes are designed with low-profile frames that fit comfortably under standard dental PPE, including masks and face shields, without interference.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is the battery life of the headlight system?</div>
+                <div class="faq-answer">
+                    <p>Each battery lasts up to 6 hours of continuous use. Optix kits come with two batteries, giving you a full 12-hour workday without downtime.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" id="warranty">What’s the warranty and support policy?</div>
+                <div class="faq-answer">
+                    <p> Optix loupes come with a 1-year warranty and lifetime free maintenance and technical support. We’re committed to supporting you long after your first use.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider">
+            <i class="fas fa-comments"></i>
+        </div>
+
+        <section class="comments-section">
+            <h2>Customer Reviews</h2>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Dr. Mohammed Ellaqanny</span>
+                    <span class="comment-date">Verified Purchase</span>
+                </div>
+                <div class="comment-content">
+                    <p>L loupes to7fa wla 8alta bsra7a w ha2ol comment tany bs b3d m agraboh fatra atwal w at3aod 3leh + l packaging chic awy</p>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Dr. Omnia Elsaqa</span>
+                    <span class="comment-date">Verified Purchase</span>
+                </div>
+                <div class="comment-content">
+                    <p>Dr nassar 5lany agrb l air loupes 7a2i2i esm 3la mosama hya 5afifa gdn w more7a awy llras w l magnification to7fa</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

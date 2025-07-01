@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optix | Precision Dental Loupes</title>
+    <title>Optix | Precision Dental Loupes & Magnification Systems</title>
+    <meta name="description" content="Premium dental loupes with German Schott lenses, LED illumination, and superior magnification for dental professionals. Enhance precision and reduce fatigue.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="main-nav">
             <div class="logo">
-                <img src="imgs/logo.png" alt="Optix Logo">
-                <img src="imgs/logo3.png" alt="Optix Logo">
+                <img src="imgs/Optix png.png" alt="Optix Logo">
                 
             </div>
             
-            <!-- Hamburger Menu Checkbox (hidden) -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger" aria-label="Menu">
                 <span class="hamburger-line"></span>
@@ -26,115 +28,309 @@
             
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#products">product</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#products">Products</a></li>
+                <!-- <li><a href="#features">Features</a></li> -->
+                <li><a href="#support">Support</a></li>
+                <li><a href="#contact" class="cta-nav">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-
     <main>
-    <div class="slider-container">
-        <div class="slider auto-play" id="slider">
-            <div class="slides">
-                <div class="slide">
-                    <img src="imgs/photo1.jpg" alt="Beautiful Landscape">
-                </div>
-                <div class="slide">
-                    <img src="imgs/photo2.jpg" alt="Ocean View">
-                </div>
-                <div class="slide">
-                    <img src="imgs/photo3.jpg" alt="Forest Path">
 
+        <!-- Hero Section with Slider -->
+        <section class="hero-section">
+            <div class="slider-container">
+                <div class="slider auto-play" id="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="imgs/photo1.jpg" alt="Optix Precision Dental Loupes">
+                            <div class="slide-content">
+                                <h1>Precision Redefined</h1>
+                                <p>Advanced German optics meet ergonomic design for unparalleled dental precision</p>
+                                <a href="#products" class="hero-cta">Explore Products</a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="imgs/photo2.jpg" alt="Professional Dental Equipment">
+                            <div class="slide-content">
+                                <h1>Enhanced Visibility</h1>
+                                <p>65,000 lux LED illumination with true daylight color temperature</p>
+                                <a href="#features" class="hero-cta">View Features</a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="imgs/photo3.jpg" alt="Ergonomic Dental Loupes">
+                            <div class="slide-content">
+                                <h1>Ergonomic Excellence</h1>
+                                <p>Lightweight design for extended comfort during long procedures</p>
+                                <a href="#about" class="hero-cta">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="nav-btn prev-btn" onclick="changeSlide(-1)" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next-btn" onclick="changeSlide(1)" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="dots-container">
+                        <div class="dot active" onclick="goToSlide(1)"></div>
+                        <div class="dot" onclick="goToSlide(2)"></div>
+                        <div class="dot" onclick="goToSlide(3)"></div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <button class="nav-btn prev-btn" onclick="changeSlide(-1)">❮</button>
-            <button class="nav-btn next-btn" onclick="changeSlide(1)">❯</button>
-
-            <div class="dots-container">
-                <div class="dot active" onclick="goToSlide(1)"></div>
-                <div class="dot" onclick="goToSlide(2)"></div>
-                <div class="dot" onclick="goToSlide(3)"></div>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="script.js"></script>
-        
-        <!-- About Us Section -->
-        <section id="about" class="about">
-            <div class="about-container">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
                 <div class="about-content">
-                    <h2>WHO ARE WE?</h2>
-                    <div class="underline"></div>
-                    <p>
-                        <strong>OptiX</strong> is a brand <strong>Specialized</strong> in Dental Loupes, high-precision magnification 
-                        eyewear used by dentists. The brand aims to provide premium-quality tools that enhance 
-                        Visibility, Accuracy and Professionalism in dental work.
-                    </p>
-                </div>
-                <div class="about-image">
-                    <img src="imgs/logo2.png" alt="Dental professional using Optix loupes">
+                    <div class="about-text">
+                        <div class="section-header">
+                            <span class="section-badge">About Optix</span>
+                            <h2>Precision Engineered for Excellence</h2>
+                            <div class="section-line"></div>
+                        </div>
+                        <p class="lead">
+                            Optix specializes in manufacturing premium dental loupes that combine cutting-edge German optics with ergonomic design principles, delivering unmatched precision and comfort for dental professionals worldwide.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Superior Magnification</h4>
+                                    <p>Crystal-clear magnification from 2.5X to 8X with German Schott lenses</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Advanced Illumination</h4>
+                                    <p>65,000 lux LED with true daylight color temperature (5500K)</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Ergonomic Design</h4>
+                                    <p>Lightweight construction reduces neck strain and fatigue</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="imgs/logo.png" alt="Optix Professional Dental Loupes">
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <hr class="fancy-line">
+        <!-- Features Section
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-badge">Why Choose Optix</span>
+                    <h2>Advanced Features for Modern Dentistry</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>German Schott Optics</h3>
+                        <p>Premium optical glass ensures superior clarity, minimal distortion, and exceptional color accuracy for precise diagnostics.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <h3>Long-Lasting Battery</h3>
+                        <p>2000mAh rechargeable battery provides 5-6 hours of continuous operation with quick charging capability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Anti-Fog Technology</h3>
+                        <p>Advanced lens coating prevents fogging in humid conditions, ensuring clear vision throughout procedures.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3>Adjustable Settings</h3>
+                        <p>Customizable brightness and focus settings allow for personalized comfort and optimal visualization.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
 
-        <!-- products section -->
+        <!-- Products Section -->
         <section id="products" class="products-section">
-            <div class="products-grid">
-                <div class="product-card" onclick="goToProductPage('product1.html')">
-                    <img src="imgs/photo3.jpg" alt="Product 1">
-                    <p>OptiX Airloupes</p>
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-badge">Our Products</span>
+                    <h2>Professional Dental Loupes</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card" onclick="goToProductPage('product1.html')">
+                        <div class="product-image">
+                            <img src="imgs/photo3.jpg" alt="OptiX Airloupes Professional Dental Magnification">
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>OptiX Airloupes</h3>
+                            <p>Premium lightweight dental loupes with advanced LED illumination and superior German optics.</p>
+                            <div class="product-specs">
+                                <span class="spec">2.5X - 8X Magnification</span>
+                                <span class="spec">5,500 Kelvin LED</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-
-    </main>
-    <hr class="fancy-line">
-
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 onclick="goToProductPage('userGuide.html')">User Guide</h3>
-                <p>Learn how to set up, use, and maintain your loupes properly for long-lasting performance.</p>
-                
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#products">products</a></li>
-                    <li><a href="#about">About Us</a></li>
-
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+        <!-- Support Section -->
+        <section id="support" class="support-section">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-badge">Support</span>
+                    <h2>We're Here to Help</h2>
+                    <div class="section-line"></div>
                 </div>
-                <p>info@optixloupes.com<br>+1 (800) 555-1234</p>
+                <div class="support-grid">
+                    <div class="support-card" onclick="goToProductPage('userGuide.html')">
+                        <div class="support-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>User Guide</h3>
+                        <p>Comprehensive setup, usage, and maintenance instructions for optimal performance.</p>
+                    </div>
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Technical Support</h3>
+                        <p>Expert assistance from our technical team for any questions or concerns.</p>
+                    </div>
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Maintenance Service</h3>
+                        <p>Professional maintenance and repair services to keep your loupes in perfect condition.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2023 Optix Dental Loupes. All rights reserved.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <div class="footer-logo">
+                        <img src="imgs/logo.png" alt="Optix Logo">
+                        <span class="logo-text">OPTIX</span>
+                    </div>
+                    <p class="company-description">
+                        Leading manufacturer of precision dental loupes, committed to enhancing dental professionals' accuracy and comfort through innovative optical solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61577281456716&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/optix.loupes.egy?igsh=bjR2cWlwOXZvcnNk" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Products</a></li>
+                        
+                        <li><a href="#">Specifications</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="userGuide.html">User Guide</a></li>
+                        <li><a href="/FAQ.html">FAQ</a></li>
+                        <li><a href="/FAQ.html#warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+
+                    <div class="contact-info">
+                                                <div class="contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <a class="contact-link" href="https://www.instagram.com/optix.loupes.egy?igsh=bjR2cWlwOXZvcnNk" target="_blank">
+                                <span>OptiX Loupes.egy</span>
+                            </a>
+                            
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-facebook " ></i>
+                                    <a class="contact-link" href="https://www.facebook.com/profile.php?id=61577281456716&mibextid=ZbWKwL" >
+                                      <span>OptiX Loupes.egy</span>
+                                    </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa fas fa-envelope"></i>
+                            <a class="contact-link">
+                                <span>optixloupsegy@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Optix Dental Loupes. All rights reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating Demo Button -->
+    <div id="demo-button" class="demo-button">
+        <a href="https://docs.google.com/forms/d/1sSwQcl0dz6E7ymo2neC65IBEo2QSuxzCEj4yafunNsg/viewform" class="demo-btn">
+            <i class="fas fa-calendar-alt"></i>
+            Book Your Free Demo Now
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

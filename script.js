@@ -83,3 +83,14 @@ slider.addEventListener('touchend', (e) => {
         }
     }
 });
+
+
+
+
+
+
+
+
+
+
+

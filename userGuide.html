@@ -3,157 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started with Your New Loupes</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Professional Loupes Setup & Care Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* General Styles */
+        /* Color Variables */
         :root {
-    --primary: #4EC6E0;    /* Dark blue */
-    --secondary: #0096C7;  /* Medium blue */
-    --accent: #4EC6E0;     /* Light blue */
-    --green: #4dbc87;
-    --light: #f3f8fd;
-    --dark: #212529;
-    --highlight: #f70035;  /* Gold for accents */
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+            --primary: #005f73;
+            --secondary: #0a9396;
+            --accent: #94d2bd;
+            --highlight: #ee9b00;
+            --warning: #bb3e03;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+        /* Base Styles */
+        body {
+            font-family: sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Header Styles */
-header h1 {
-    color:var(--secondary);
-    font-weight: 700;
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-align: center;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #eaeaea;
-}
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+        }
 
-/* Section Styles */
-.section {
-    margin-bottom: 30px;
-}
+        /* Typography */
+        h1, h2, h3 {
+            font-family: sans-serif;
+            color: var(--primary);
+            font-weight: 600;
+        }
 
-.section h2 {
-    color: #3498db;
-    font-weight: 500;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
 
+        h1:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--highlight);
+        }
 
-.section p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: var(--light);
-}
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+            color: var(--secondary);
+        }
 
-/* List Styles */
-ul {
-    padding-left: 20px;
-    color: var(--light);
-}
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
 
+        /* Section Styles */
+        .section {
+            margin-bottom: 2.5rem;
+        }
 
-li {
-    margin-bottom: 8px;
-    position: relative;
-}
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
 
-li:before {
-    content: "•";
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
+        .section-header i {
+            margin-right: 12px;
+            color: var(--highlight);
+            font-size: 1.4rem;
+        }
 
+        /* List Styles */
+        ul {
+            padding-left: 1.5rem;
+            margin: 1.2rem 0;
+        }
 
-/* Divider Styles */
-.divider {
-    text-align: center;
-    color: #bdc3c7;
-    font-size: 18px;
-    margin: 25px 0;
-    letter-spacing: 5px;
-}
-.section .warning{
-    color: var(--highlight);
-}
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--dark);
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-        margin: 15px;
-    }
-    
-    header h1 {
-        font-size: 24px;
-    }
-    
-    .section h2 {
-        font-size: 20px;
-    }
-}
-.warning {
-    font-weight: 500;
-    color: #e74c3c;
-    margin-top: 15px;
-}
+        li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 8px;
+            height: 8px;
+            
+            ;
+        }
+
+        /* Warning Styles */
+        .warning-box {
+            background-color: #fff8f6;
+            border-left: 4px solid var(--warning);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .warning-title {
+            display: flex;
+            align-items: center;
+            color: var(--warning);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .warning-title i {
+            margin-right: 8px;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            color: var(--gray);
+        }
+
+        .divider:before, .divider:after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .divider:before {
+            margin-right: 1rem;
+        }
+
+        .divider:after {
+            margin-left: 1rem;
+        }
+
+        /* Callout */
+        .callout {
+            background-color: #f0f7fa;
+            border-left: 4px solid var(--accent);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Setup & Care Instructions</h1>
+            <h1>Professional Loupes Setup & Care Guide</h1>
         </header>
 
-        <section class ="section introduction">
-            <h2>Getting Started with Your New Loupes</h2>
-
+        <section class="section introduction">
+            <div class="section-header">
+                <i class="fas fa-microscope"></i>
+                <h2>Getting Started with Your New Loupes</h2>
+            </div>
+            <p>Welcome to enhanced visualization in your clinical practice. These premium loupes are engineered for precision and comfort, following these guidelines will ensure optimal performance and longevity.</p>
         </section>
         
+        <div class="divider">
+            <i class="fas fa-asterisk"></i>
+        </div>
+        
         <section class="section adjustment">
-            <p>It's normal for new users to experience slight discomfort or dizziness at first, especially when transitioning to higher magnification levels. A 2–3 week adjustment period is recommended. Start by wearing your loupes for no more than one hour per day, and gradually increase usage as your hand-eye coordination improves.</p>
-            <div class="divider">⸻</div>
+            <div class="callout">
+                <h3>Adaptation Period</h3>
+                <p>New users typically require a 2–3 week adjustment period when transitioning to higher magnification levels. Initial symptoms like slight discomfort or dizziness are normal and temporary.</p>
+                <p><strong>Recommended Protocol:</strong> Begin with no more than one hour of daily use, gradually increasing duration as your visual-motor coordination adapts.</p>
+            </div>
         </section>
         
         <section class="section indications">
-            <h2>Indications for Use</h2>
-            <p>Loupes are precision optical devices designed to magnify oral cavities and surgical fields. They are intended for use only by qualified medical and dental professionals.</p>
-            <div class="divider">⸻</div>
+            <div class="section-header">
+                <i class="fas fa-clipboard-check"></i>
+                <h2>Indications for Use</h2>
+            </div>
+            <p>These precision optical devices are designed for magnification of oral cavities and surgical fields. Intended exclusively for use by qualified medical and dental professionals in clinical settings.</p>
         </section>
         
+        <div class="divider">
+            <i class="fas fa-asterisk"></i>
+        </div>
+        
         <section class="section cleaning">
-            <h2>Cleaning & Disinfecting</h2>
-            <p>To ensure long-lasting performance, follow these care instructions:</p>
+            <div class="section-header">
+                <i class="fas fa-broom"></i>
+                <h2>Cleaning & Maintenance Protocol</h2>
+            </div>
+            <p>Proper care ensures optical clarity and extends product lifespan. Follow these evidence-based cleaning procedures:</p>
             
-            <p class="warning">Avoid the following:</p>
-            <ul>
-                <li>Spraying liquids directly on the device</li>
-                <li>Rinsing or submerging in water or ultrasonic cleaners</li>
-                <li>Using autoclaves, alcohol over 70%, or harsh disinfectants (e.g., glutaraldehyde, iodophor)</li>
-                <li>Cleaning lenses with paper towels</li>
-            </ul>
+            <div class="warning-box">
+                <div class="warning-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Prohibited Cleaning Methods</span>
+                </div>
+                <ul>
+                    <li><strong>Direct liquid application:</strong> Never spray liquids directly on optical surfaces</li>
+                    <li><strong>Immersion cleaning:</strong> Avoid rinsing or submerging in any liquids, including water and ultrasonic cleaners</li>
+                    <li><strong>Harsh disinfectants:</strong> Excludes alcohol concentrations >70%, glutaraldehyde, or iodophor solutions</li>
+                    <li><strong>Abrasive materials:</strong> Paper towels or other non-lens approved cleaning materials</li>
+                    <li><strong>Heat sterilization:</strong> Autoclaving will permanently damage optical components</li>
+                </ul>
+            </div>
+            
+            <h3>Recommended Cleaning Procedure</h3>
+            <ol>
+                <li>Use only manufacturer-provided or approved lens cleaning solutions</li>
+                <li>Apply solution to microfiber cloth, not directly to lenses</li>
+                <li>Gently wipe in circular motions from center outward</li>
+                <li>Store in protective case when not in use</li>
+            </ol>
+        </section>
+        
+        <div class="divider">
+            <i class="fas fa-asterisk"></i>
+        </div>
+        
+        <section class="section support">
+            <div class="section-header">
+                <i class="fas fa-headset"></i>
+                <h2>Technical Support</h2>
+            </div>
+            <p>For any questions regarding setup, maintenance, or performance optimization, please contact our clinical support team:</p>
+            <!-- <p><i class="fas fa-phone-alt"></i> <strong>Support Line:</strong> (800) 555-0199<br> -->
+            <i class="fas fa-envelope" href="optixloupsegy@gmail.com"></i> <strong>Email:</strong> optixloupsegy@gmail.com</p>
+            <!-- <i class="fas fa-facebook"></i> <strong>Email:</strong> support@loupespro.com</p> -->
         </section>
     </div>
 </body>
