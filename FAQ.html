@@ -203,6 +203,20 @@
                 font-size: 1.4rem;
             }
         }
+
+        /* Highlight animation styles */
+        @keyframes highlight-pulse {
+            0% { background-color: rgba(238, 155, 0, 0.3); }
+            50% { background-color: rgba(238, 155, 0, 0.7); }
+            100% { background-color: rgba(238, 155, 0, 0.3); }
+        }
+
+        .highlighted-warranty {
+            animation: highlight-pulse 2s ease 3;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -315,5 +329,48 @@
             </div>
         </section>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to highlight the warranty section
+        function highlightWarranty() {
+            const warrantyQuestion = document.getElementById('warranty');
+            
+            if (warrantyQuestion) {
+                // Remove any existing highlight classes
+                warrantyQuestion.classList.remove('highlighted-warranty');
+                
+                // Trigger reflow to restart animation
+                void warrantyQuestion.offsetWidth;
+                
+                // Add highlight class
+                warrantyQuestion.classList.add('highlighted-warranty');
+                
+                // Scroll to the warranty section
+                warrantyQuestion.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                
+                // Remove highlight class after animation completes
+                setTimeout(() => {
+                    warrantyQuestion.classList.remove('highlighted-warranty');
+                }, 6000);
+            }
+        }
+        
+        // Check URL hash on page load
+        if (window.location.hash === '#warranty') {
+            highlightWarranty();
+        }
+        
+        // Listen for hash changes
+        window.addEventListener('hashchange', function() {
+            if (window.location.hash === '#warranty') {
+                highlightWarranty();
+            }
+        });
+    });
+</script>
 </body>
 </html>
